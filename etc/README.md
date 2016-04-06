@@ -1,0 +1,1 @@
+This directory contains example configuration files for Spectrum 2 and Prosody.

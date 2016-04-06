@@ -1,0 +1,16 @@
+transwhat:
+  build: .
+  links:
+    - prosody
+  volumes:
+    - ./etc/spectrum2/transports/whatsapp.cfg:/etc/spectrum2/transports/whatsapp.cfg
+
+prosody:
+  image: prosody/prosody
+  ports:
+    - "5221:5221"
+    - "5222:5222"
+  volumes:
+    - ./etc/prosody/conf.d/whatsapp.cfg.lua:/etc/prosody/conf.d/whatsapp.cfg.lua
+
+
